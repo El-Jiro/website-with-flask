@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-</head>
-
-<body>
+<!--Especificamos la plantilla que queremos extender-->
+{%extends "layout.html"%}
+<!--Abrimos y cerramos el bloque de contenido-->
+{%block content%}
+<div class="home">
     <h1>Mi Página Principal</h1>
     <p>Esto es un sitio web de prueba</p>
-</body>
-
-</html>
+</div>
+{%endblock%}

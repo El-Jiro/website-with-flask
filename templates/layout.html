@@ -13,13 +13,15 @@
       <strong>
         <nav>
           <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <!--Esta sintaxis para flask activará las funciones de home y about respectivamente-->
+            <li><a href="{{ url_for('home') }}">Página principal</a></li>
             <li><a href="{{ url_for('about') }}">Acerca de</a></li>
           </ul>
         </nav>
       </strong>
     </div>
   </header>
+  <!--Esto se llama herencia de plantillas, aquí se mostrará el contenido de home o about según corresponda-->
   <div class="container">
     {%block content%}
     {%endblock%}
