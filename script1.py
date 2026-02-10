@@ -8,8 +8,13 @@ app = Flask(__name__)
 #recibirá el nombre de la ruta de nuestro sitio que queremos mostrar en forma de string
 @app.route("/")
 #Justo después de definir la ruta, creamos una función que maneje la petición
-def show_home():
+def home():
     return "El contenido del sitio va aquí"
+
+#Podemos crear tantas rutas como necesitemos siguiendo el mismo procedimiento, por ejemplo aquí crearé una para la sección "acerca de"
+@app.route("/about/")
+def about():
+    return "Sitio web de Kevin"
 
 #Cuando ejecutemos un script desde su propio archivo, el intérprete de python siempre le asignara el nombre __main__, en cambio si lo 
 #importamos y lo ejecutamos desde otro script, se le asignará el nombre con el que hayamos guardado el archivo, por tanto antes de ejecutar
