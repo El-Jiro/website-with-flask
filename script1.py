@@ -1,4 +1,4 @@
-from flask import Flask #importamos la clase Flask desde la librería homónima
+from flask import Flask, render_template
 
 #Instanciamos Flask, le pasamos la palabra reservada __name__ en el constructor  (esta palabra representa el nombre de nuestro script 
 # de python) y lo guardamos en una variable
@@ -9,7 +9,10 @@ app = Flask(__name__)
 @app.route("/")
 #Justo después de definir la ruta, creamos una función que maneje la petición
 def home():
-    return "El contenido del sitio va aquí"
+    #Para renderizar un sitio web completo en vez de sólo un string, deberemos crear un archivo html aparte dentro de una carpeta
+    #llamada templates. Una vez que lo tengamos invocamos al método "render_template"´(que deberemos importar previamente desde flask) 
+    #en el return de nuestra función controladora y le pasamos el nombre de neustro archivo en forma de string 
+    return render_template("home.html")
 
 #Podemos crear tantas rutas como necesitemos siguiendo el mismo procedimiento, por ejemplo aquí crearé una para la sección "acerca de"
 @app.route("/about/")
