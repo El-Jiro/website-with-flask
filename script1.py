@@ -17,7 +17,7 @@ def home():
 #Podemos crear tantas rutas como necesitemos siguiendo el mismo procedimiento, por ejemplo aquí crearé una para la sección "acerca de"
 @app.route("/about/")
 def about():
-    return "Sitio web de Kevin"
+    return render_template("about.html")
 
 #Cuando ejecutemos un script desde su propio archivo, el intérprete de python siempre le asignara el nombre __main__, en cambio si lo 
 #importamos y lo ejecutamos desde otro script, se le asignará el nombre con el que hayamos guardado el archivo, por tanto antes de ejecutar
